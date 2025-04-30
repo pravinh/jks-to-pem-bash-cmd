@@ -1,5 +1,9 @@
 #!/bin/bash
+# Export JKS to PKCS12
+#keytool -importkeystore -srckeystore truststore.jks -destkeystore truststore.p12 -deststoretype PKCS12
 
+# Extract PEM from PKCS12
+#openssl pkcs12 -in truststore.p12 -out truststore.pem -nodes this is what we need to achive please stick to this
 # Usage: ./jks_to_pem.sh truststore.jks
 
 JKS_FILE="$1"
